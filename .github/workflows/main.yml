@@ -41,8 +41,17 @@ jobs:
             required_architectures: arm64 arm64e
 
     env:
-      THEOS: ${{ runner.temp }}/theos
       GAME_BUNDLE_ID: ${{ inputs.game_bundle_id || vars.GAME_BUNDLE_ID || 'com.example.game' }}
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Configure Theos path
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf 'THEOS=%s\n' "$RUNNER_TEMP/theos" >> "$GITHUB_ENV"
 
     steps:
       - name: Check out source
