@@ -53,7 +53,6 @@ jobs:
           set -euo pipefail
           printf 'THEOS=%s\n' "$RUNNER_TEMP/theos" >> "$GITHUB_ENV"
 
-    steps:
       - name: Check out source
         uses: actions/checkout@v4
 
