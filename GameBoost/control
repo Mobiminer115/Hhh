@@ -1,0 +1,9 @@
+Package: com.example.gameboost
+Name: GameBoost
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Metal render-scale control and safe render-thread QoS overlay for an authorized game.
+Maintainer: Your Name
+Author: Your Name
+Section: Tweaks
+Depends: mobilesubstrate
